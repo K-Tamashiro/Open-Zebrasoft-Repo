@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project>
+<resources>
+    <string name="app_name">TelRecFree</string>
+    <string name="audio_file">/sdcard/sample.mp3</string>
+    <string name="streaming_url">http://www.j-wavemusic.com/brandnew-J.wma</string>
+    <string name="rec_file">/sdcard/TelRec.3gp</string>
+    <string name="m_title">TelRecFREE MENU</string>
+    <string name="l_title">REC FILE LIST</string>
+    <string name="w_title1">TelRec 録音トグルスイッチ</string>
+    <string name="w_title2">TelRec 録音ファイルリスト</string>
+    <string name="w_title3">TelRec 録音開始時間切替</string>
+</resources>

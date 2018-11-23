@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="jp.co.zebrasoft.android.telrecfree" 
+	android:installLocation="auto" android:versionName="2.5.8" android:versionCode="76">
+    <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"></uses-permission><uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+    <application 
+    android:label="@string/app_name" 
+    android:icon="@drawable/telrec0" 
+    android:killAfterRestore="true" 
+    android:theme="@style/Theme.CustomDialog">
+		<activity android:label="@string/m_title" android:name=".TelRecMainMenuActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+		
+
+			</intent-filter>
+		</activity>
+		
+		
+		<activity android:label="@string/app_name" android:name=".TelRecPlayerDialog" android:configChanges="keyboard|orientation" android:screenOrientation="unspecified">
+		</activity>
+		<service android:label="@string/app_name" android:name=".TelRecService">
+		</service>
+		<receiver android:name=".TelRecRenameReceiver" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="jp.co.zebrasoft.android.telrecfree.VIEW"></action>
+			</intent-filter>
+		</receiver>
+		<activity android:name=".TelRecRename" android:label="@string/app_name" android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+		<service android:name=".TelRecPutini"></service>
+		<receiver android:name=".TelRecOutGoingCall">
+			<intent-filter>
+				<action android:name="android.intent.action.NEW_OUTGOING_CALL"></action>
+			</intent-filter>
+		</receiver>
+		<activity android:name=".TelRecFileListView" android:label="@string/l_title" android:configChanges="keyboard|orientation"></activity>
+		<receiver android:name=".TelRecWidget" android:label="@string/w_title1">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+			</intent-filter>
+			<meta-data android:resource="@xml/appwidgetex" android:name="android.appwidget.provider"></meta-data>
+		</receiver>
+		<service android:name=".TelRecWidgetService">
+			<intent-filter>
+				<action android:name="jp.co.zebrasoft.android.telrecfree.REC_BTNCLICK"></action>
+			</intent-filter>
+		</service>
+		<receiver android:name=".TelRecWidgetFolder" android:label="@string/w_title2">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+			</intent-filter>
+			<meta-data android:resource="@xml/appwidgetex" android:name="android.appwidget.provider"></meta-data>
+		</receiver>
+		<service android:name=".TelRecWidgetFolderService">
+			<intent-filter>
+				<action android:name="jp.co.zebrasoft.android.telrecfree.FOLDER_BTNCLICK"></action>
+			</intent-filter>
+		</service>
+		<receiver android:name=".TelRecWakeUp">
+			<intent-filter>
+				<action android:name="android.intent.action.USER_PRESENT"></action>
+			</intent-filter>
+		</receiver>
+		<service android:label="TelRecFreeスライドロックレシーバ" android:name=".TelRecWakeupService"></service>
+	</application>
+	<uses-sdk android:minSdkVersion="7"/>
+</manifest> 

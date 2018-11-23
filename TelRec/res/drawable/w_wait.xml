@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- カスタムボタンのセレクタ -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/telrec_pro_wait1" android:state_pressed="true" />
+    <item android:drawable="@drawable/telrec_pro_wait1" android:state_focused="true" />
+    <item android:drawable="@drawable/telrec_pro_wait" />
+</selector>
