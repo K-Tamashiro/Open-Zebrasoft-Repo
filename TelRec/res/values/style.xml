@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="Theme.CustomDialog"  parent="android:style/Theme.Dialog">
+    <item name="android:windowBackground">@drawable/tbackground</item>
+    <item name="android:windowTitleStyle">@style/WindowTitle</item>
+</style>
+
+<style name="Theme.Player"  parent="layout/dialog">
+    <item name="android:windowBackground">@drawable/tbackground</item>
+    <item name="android:windowTitleStyle">@style/WindowTitle</item>
+</style>
+
+  <style name="CustomProgessBar.Horizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+    <item name="android:indeterminateOnly">false</item>
+    <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+    <item name="android:minHeight">20dip</item>
+    <item name="android:maxHeight">20dip</item>
+  </style>
+
+  <style name="WindowTitleBackground">
+    <item name="android:background">@drawable/title_bar</item>
+  </style>
+ 
+  <style name="WindowTitle">
+    <item name="android:singleLine">true</item>
+    <item name="android:textAppearance">
+      @style/TextAppearance.WindowTitle</item>
+    <item name="android:shadowColor">#BB000000</item>
+    <item name="android:shadowRadius">2.75</item>
+  </style>
+
+  <style name="TextAppearance.WindowTitle"
+    parent="@android:style/TextAppearance.WindowTitle">
+    <item name="android:textColor">#fff</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+</resources>
